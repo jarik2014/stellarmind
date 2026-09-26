@@ -44,16 +44,15 @@ User → Orchestrator (Claude plans tasks)
 
 1. Add the agent definition in `src/agents/registry.js`
 2. Add the service function in `src/agents/services.js`
-3. Register the premium endpoint in `src/routes/premium-routes.js` — that is the
-   canonical route registration; `src/server.js` only mounts it. Prices come from
-   `src/pricing.config.js` (validated by `src/pricing.validator.js`), not from the
-   route itself.
+3. Register the premium endpoint in `src/routes/premium-routes.js` — that is the canonical route
+   registration; `src/server.js` only mounts it. Prices come from `src/pricing.config.js` (validated
+   by `src/pricing.validator.js`), not from the route itself.
 4. Map the agent ID to its endpoint in `src/agents/orchestrator.js`
 
 ### Running Tests
 
-`npm test` is **not** the demo: it runs the offline regression suite, six files in
-sequence, and none of them needs credentials or network access.
+`npm test` is **not** the demo: it runs the offline regression suite, six files in sequence, and
+none of them needs credentials or network access.
 
 ```bash
 npm test               # offline: settlement header, budget, usage tracking,
@@ -77,8 +76,8 @@ npm run test:premium   # expect the suite's summary line, exit code 0
 npm run test:validation
 ```
 
-Every command above is the one in `package.json` — run `npm run` with no arguments
-to list them all if they ever drift apart.
+Every command above is the one in `package.json` — run `npm run` with no arguments to list them all
+if they ever drift apart.
 
 ### Security Hygiene
 
